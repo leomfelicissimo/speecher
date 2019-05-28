@@ -1,0 +1,7 @@
+{
+    "pixabayUrl": "https://pixabay.com/api",
+    "pixabayApiKey": "12613976-dca746648a07aef08bd0bcc18",
+    "pixabayOrder": "popular",
+    "pixabayPerPage": "3",
+    "pixabayPage": "1"
+}
