@@ -1,14 +1,15 @@
 import os
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from speecher import Speecher
 from pixabay_image_provider import PixabayImageProvider
 from config import load_configuration
 
 app = Flask(__name__)
+CORS(app)
 
 CONFIG_PATH = os.getenv("SPEECHER_CONFIG", "dev.json")
 speecher_config = load_configuration(CONFIG_PATH)
-print('Speecher config', speecher_config)
 provider = PixabayImageProvider(speecher_config)
 speecher = Speecher(provider)
 

@@ -12,12 +12,13 @@ class PixabayImageProvider(ImageProvider):
         page = self.config.page
         per_page = self.config.per_page
         api_key = self.config.key
-        parameters = "?key={0}&q={1}&page={2}per_page={3}&order={4}".format(api_key, q, page, per_page, order)
+        parameters = "?key={0}&q={1}&page={2}&per_page={3}&order={4}".format(api_key, q, page, per_page, order)
         pixabay_url = "{0}/{1}".format(url, parameters)
         return pixabay_url
 
     def get_image_url(self, term):
         pixabay_url = self.create_request(term)
+        print('Url: ', pixabay_url)
         r = requests.get(pixabay_url)
         if (r.status_code == 200):
             json_data = r.json()

@@ -14,5 +14,5 @@ class Speecher:
     
     def get_illustration_url(self, sentence):
         theme = self.extract_theme(sentence)
-        illustration_url = self.imageProvider.get_image_url(theme)
+        illustration_url = self.imageProvider.get_image_url(theme) if theme is not None else ""
         return illustration_url
