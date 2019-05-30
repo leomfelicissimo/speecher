@@ -4,7 +4,9 @@ Criei esta API com o intuito de preservar uma ideia que tenho há algum tempo. A
 
 ## BackEnd
 
-### Instale o python3 e faça clone do repo e crie um ambiente virtual:
+Após o clone, a partir do diretório **api**.
+
+### Instale o python3 e crie um ambiente virtual:
 
 ```
 $ python3 -m venv ./venv
@@ -27,9 +29,9 @@ $ FLASK_APP=server.py flask run
 
 ## FrontEnd
 
-### Instale as dependências
+Após o clone e a execução do server, a partir do diretório **web**.
 
-A partir do diretório web. Execute um npm install
+### Instale as dependências
 ```
 $ npm install
 ```
